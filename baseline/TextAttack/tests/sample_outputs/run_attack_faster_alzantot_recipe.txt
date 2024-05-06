@@ -1,0 +1,71 @@
+/.*/Attack(
+  (search_method): AlzantotGeneticAlgorithm(
+    (pop_size):  60
+    (max_iters):  20
+    (temp):  0.3
+    (give_up_if_no_improvement):  False
+    (post_crossover_check):  False
+    (max_crossover_retries):  20
+  )
+  (goal_function):  UntargetedClassification
+  (transformation):  WordSwapEmbedding(
+    (max_candidates):  8
+    (embedding):  WordEmbedding
+  )
+  (constraints): 
+    (0): MaxWordsPerturbed(
+        (max_percent):  0.2
+        (compare_against_original):  True
+      )
+    (1): WordEmbeddingDistance(
+        (embedding):  WordEmbedding
+        (max_mse_dist):  0.5
+        (cased):  False
+        (include_unknown_words):  True
+        (compare_against_original):  True
+      )
+    (2): LearningToWriteLanguageModel(
+        (max_log_prob_diff):  5.0
+        (compare_against_original):  True
+      )
+    (3): RepeatModification
+    (4): StopwordModification
+  (is_black_box):  True
+) 
+
+--------------------------------------------- Result 1 ---------------------------------------------
+[[Positive (90%)]] --> [[[FAILED]]]
+
+the performances are immaculate , with roussillon providing comic relief .
+
+
+--------------------------------------------- Result 2 ---------------------------------------------
+[[Positive (98%)]] --> [[Negative (57%)]]
+
+kinnear . . . gives his [[best]] screen performance with an [[oddly]] winning [[portrayal]] of one of life's [[ultimate]] [[losers]] .
+
+kinnear . . . gives his [[higher]] screen performance with an [[interestingly]] winning [[description]] of one of life's [[final]] [[mugs]] .
+
+
+--------------------------------------------- Result 3 ---------------------------------------------
+[[Positive (83%)]] --> [[Negative (51%)]]
+
+hugh grant , who has a good line in charm , has never been more [[charming]] than in about a boy .
+
+hugh grant , who has a good line in charm , has never been more [[loveable]] than in about a boy .
+
+
+
++-------------------------------+---------+
+| Attack Results                |         |
++-------------------------------+---------+
+| Number of successful attacks: | 2       |
+| Number of failed attacks:     | 1       |
+| Number of skipped attacks:    | 0       |
+| Original accuracy:            | 100.0%  |
+| Accuracy under attack:        | 33.33%  |
+| Attack success rate:          | 66.67%  |
+| Average perturbed word %:     | 17.34%  |
+| Average num. words per input: | 15.0    |
+| Avg num queries:              | 1132.67 |
++-------------------------------+---------+

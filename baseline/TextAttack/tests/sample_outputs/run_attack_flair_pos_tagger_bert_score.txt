@@ -1,0 +1,71 @@
+/.*/Attack(
+  (search_method): GreedyWordSwapWIR(
+    (wir_method):  unk
+  )
+  (goal_function):  UntargetedClassification
+  (transformation):  WordSwapEmbedding(
+    (max_candidates):  15
+    (embedding):  WordEmbedding
+  )
+  (constraints): 
+    (0): BERTScore(
+        (min_bert_score):  0.8
+        (model):  bert-base-uncased
+        (score_type):  f1
+        (compare_against_original):  True
+      )
+    (1): PartOfSpeech(
+        (tagger_type):  flair
+        (tagset):  universal
+        (allow_verb_noun_swap):  True
+        (compare_against_original):  True
+      )
+    (2): RepeatModification
+    (3): StopwordModification
+  (is_black_box):  True
+) 
+
+--------------------------------------------- Result 1 ---------------------------------------------
+[[Positive (100%)]] --> [[[FAILED]]]
+
+exposing the ways we fool ourselves is one hour photo's real strength .
+
+
+--------------------------------------------- Result 2 ---------------------------------------------
+[[Positive (96%)]] --> [[Negative (99%)]]
+
+it's up to you to decide whether to admire these people's dedication to their cause or be [[repelled]] by their dogmatism , manipulativeness and narrow , [[fearful]] view of american life .
+
+it's up to you to decide whether to admire these people's dedication to their cause or be [[rescheduled]] by their dogmatism , manipulativeness and narrow , [[shitless]] view of american life .
+
+
+--------------------------------------------- Result 3 ---------------------------------------------
+[[Positive (100%)]] --> [[Negative (71%)]]
+
+mostly , [goldbacher] just lets her complicated characters be [[unruly]] , confusing and , through it all , [[human]] .
+
+mostly , [goldbacher] just lets her complicated characters be [[disorderly]] , confusing and , through it all , [[humans]] .
+
+
+--------------------------------------------- Result 4 ---------------------------------------------
+[[Positive (99%)]] --> [[Negative (90%)]]
+
+. . . [[quite]] good at [[providing]] some good old [[fashioned]] [[spooks]] .
+
+. . . [[fairly]] good at [[deliver]] some good old [[sculpted]] [[bugging]] .
+
+
+
++-------------------------------+--------+
+| Attack Results                |        |
++-------------------------------+--------+
+| Number of successful attacks: | 3      |
+| Number of failed attacks:     | 1      |
+| Number of skipped attacks:    | 0      |
+| Original accuracy:            | 100.0% |
+| Accuracy under attack:        | 25.0%  |
+| Attack success rate:          | 75.0%  |
+| Average perturbed word %:     | 21.56% |
+| Average num. words per input: | 16.25  |
+| Avg num queries:              | 33.0   |
++-------------------------------+--------+

@@ -1,0 +1,59 @@
+/.*/Attack(
+  (search_method): BeamSearch(
+    (beam_width):  2
+  )
+  (goal_function):  TargetedClassification(
+    (target_class):  2
+  )
+  (transformation):  WordSwapWordNet
+  (constraints): 
+    (0): LanguageTool(
+        (grammar_error_threshold):  0
+        (compare_against_original):  True
+      )
+    (1): RepeatModification
+    (2): StopwordModification
+  (is_black_box):  True
+) 
+
+--------------------------------------------- Result 1 ---------------------------------------------
+[[Entailment (99%)]] --> [[[SKIPPED]]]
+
+[[[[Premise]]]]: The new rights are nice enough
+[[[[Hypothesis]]]]: Everyone really likes the newest benefits 
+
+
+--------------------------------------------- Result 2 ---------------------------------------------
+[[Neutral (100%)]] --> [[Entailment (56%)]]
+
+[[[[Premise]]]]: This site includes a list of all award winners and a searchable database of Government Executive articles.
+[[[[Hypothesis]]]]: The Government Executive articles housed on the website are not [[able]] to be searched.
+
+[[[[Premise]]]]: This site includes a list of all award winners and a searchable database of Government Executive articles.
+[[[[Hypothesis]]]]: The Government Executive articles housed on the website are not [[able-bodied]] to be searched.
+
+
+--------------------------------------------- Result 3 ---------------------------------------------
+[[Contradiction (99%)]] --> [[Entailment (100%)]]
+
+[[[[Premise]]]]: uh i don't know i i have mixed emotions about him uh sometimes i like him but at the same times i love to see somebody beat him
+[[[[Hypothesis]]]]: I like him for the most [[part]], but would still enjoy seeing someone beat him.
+
+[[[[Premise]]]]: uh i don't know i i have mixed emotions about him uh sometimes i like him but at the same times i love to see somebody beat him
+[[[[Hypothesis]]]]: I like him for the most [[office]], but would still enjoy seeing someone beat him.
+
+
+
++-------------------------------+--------+
+| Attack Results                |        |
++-------------------------------+--------+
+| Number of successful attacks: | 2      |
+| Number of failed attacks:     | 0      |
+| Number of skipped attacks:    | 1      |
+| Original accuracy:            | 66.67% |
+| Accuracy under attack:        | 0.0%   |
+| Attack success rate:          | 100.0% |
+| Average perturbed word %:     | 2.78%  |
+| Average num. words per input: | 28.67  |
+| Avg num queries:              | /.*/  |
++-------------------------------+--------+

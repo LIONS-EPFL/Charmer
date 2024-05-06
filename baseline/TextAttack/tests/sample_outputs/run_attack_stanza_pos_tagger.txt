@@ -1,0 +1,63 @@
+/.*/Attack(
+  (search_method): GreedySearch
+  (goal_function):  UntargetedClassification
+  (transformation):  WordSwapEmbedding(
+    (max_candidates):  15
+    (embedding):  WordEmbedding
+  )
+  (constraints): 
+    (0): PartOfSpeech(
+        (tagger_type):  stanza
+        (tagset):  universal
+        (allow_verb_noun_swap):  True
+        (compare_against_original):  True
+      )
+    (1): RepeatModification
+    (2): StopwordModification
+  (is_black_box):  True
+) 
+
+--------------------------------------------- Result 1 ---------------------------------------------
+[[Positive (91%)]] --> [[Negative (62%)]]
+
+lovingly photographed in the manner of a golden book sprung to [[life]] , stuart little 2 manages sweetness largely without stickiness .
+
+lovingly photographed in the manner of a golden book sprung to [[subsistence]] , stuart little 2 manages sweetness largely without stickiness .
+
+
+--------------------------------------------- Result 2 ---------------------------------------------
+[[Positive (99%)]] --> [[Negative (/.*/%)]]
+
+[[consistently]] [[clever]] and suspenseful .
+
+[[persistently]] [[/.*/]] and suspenseful .
+
+
+--------------------------------------------- Result 3 ---------------------------------------------
+[[Negative (78%)]] --> [[[SKIPPED]]]
+
+it's like a " big chill " reunion of the baader-meinhof gang , only these guys are more harmless pranksters than political activists .
+
+
+--------------------------------------------- Result 4 ---------------------------------------------
+[[Positive (96%)]] --> [[Negative (85%)]]
+
+the story gives ample opportunity for large-scale action and suspense , which director shekhar kapur supplies with [[tremendous]] [[skill]] .
+
+the story gives ample opportunity for large-scale action and suspense , which director shekhar kapur supplies with [[colossal]] [[jurisdiction]] .
+
+
+
++-------------------------------+--------+
+| Attack Results                |        |
++-------------------------------+--------+
+| Number of successful attacks: | 3      |
+| Number of failed attacks:     | 0      |
+| Number of skipped attacks:    | 1      |
+| Original accuracy:            | 75.0%  |
+| Accuracy under attack:        | 0.0%   |
+| Attack success rate:          | 100.0% |
+| Average perturbed word %:     | 22.04% |
+| Average num. words per input: | 15.5   |
+| Avg num queries:              | /.*/ |
++-------------------------------+--------+
