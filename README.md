@@ -46,7 +46,7 @@ where each column is:
 @inproceedings{Abad2024Charmer,
   author = {Abad Rocamora, Elias and Wu, Yongtao and Liu, Fanghui and Chrysos, Grigorios G and Cevher, Volkan},
 
-  title = {Revisiting character-level adversarial attacks},
+  title = {Revisiting Character-level Adversarial Attacks for Language Models},
 
   booktitle = {International Conference on Machine Learning (ICML)},
 
