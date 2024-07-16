@@ -4,7 +4,7 @@
 
 ![](schematic.png)
 
-Official implementation in PyTorch of the **ICML'24 paper "Revisiting character-level adversarial attacks"**.
+Official implementation in PyTorch of the **ICML'24 paper "Revisiting Character-level Adversarial Attacks for Language Models"**.
 
 ## Requirements
 ```
