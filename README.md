@@ -1,4 +1,4 @@
-# Charmer: Revisiting character-level adversarial attacks
+# Charmer: Revisiting Character-level Adversarial Attacks for Language Models
 
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)[![Licence](https://img.shields.io/badge/MIT_License-lightgreen?style=for-the-badge)](./LICENSE)[![OpenReview](https://img.shields.io/badge/OpenReview-8C1B13?style=for-the-badge)](https://openreview.net/forum?id=AZWqXfM6z9)
 
