@@ -40,6 +40,10 @@ where each column is:
 - `similarity`: USE between `original` and `perturbed`.
 - `time`: Time needed to produce `perturbed`.
 
+## Jailbreaking
+
+To run Charmer in the Jailbreaking setting, you can run `attack_jailbreak.py`
+
 ## Cite as:
 
 ```
