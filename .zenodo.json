@@ -1,0 +1,43 @@
+{
+  "title": "Charmer: Revisiting Character-level Adversarial Attacks for Language Models",
+  "description": "Official software implementation accompanying the ICML 2024 paper Revisiting Character-level Adversarial Attacks for Language Models.",
+  "creators": [
+    {
+      "name": "Abad Rocamora, Elias"
+    },
+    {
+      "name": "Wu, Yongtao"
+    },
+    {
+      "name": "Liu, Fanghui"
+    },
+    {
+      "name": "Chrysos, Grigorios G."
+    },
+    {
+      "name": "Cevher, Volkan"
+    }
+  ],
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "language": "eng",
+  "grants": [
+    {
+      "id": "10.13039/501100001711::200021_205011"
+    }
+  ],
+  "keywords": [
+    "adversarial attacks",
+    "language models",
+    "character-level attacks",
+    "robustness"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://openreview.net/forum?id=AZWqXfM6z9",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article"
+    }
+  ]
+}
